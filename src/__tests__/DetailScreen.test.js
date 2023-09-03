@@ -24,9 +24,7 @@ describe('DetailScreen', () => {
     const {getByTestId} = render(
       <DetailScreen route={mockRoute} navigation={mockNavigation} />,
     );
-
     const backButton = getByTestId('backButton');
-
     fireEvent.press(backButton);
 
     expect(mockNavigation.goBack).toHaveBeenCalled();
